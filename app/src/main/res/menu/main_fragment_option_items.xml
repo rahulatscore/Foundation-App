@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/itemSettings"
+
+          android:title="setting"
+          app:showAsAction="never"/>
+    <item android:id="@+id/itemCrashMe"
+
+          android:title="Crash Me"
+          app:showAsAction="never"/>
+    <item android:id="@+id/itemDetail"
+
+          android:title="Open Detail"
+          app:showAsAction="never"/>
+
+    <item android:id="@+id/itemLogs"
+
+          android:title="Dump Logs"
+          app:showAsAction="never"/>
+</menu>

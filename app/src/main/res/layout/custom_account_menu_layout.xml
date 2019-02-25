@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--suppress AndroidMissingOnClickHandler -->
+<Button
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="48dp"
+    android:layout_width="wrap_content"
+    android:drawableEnd="@drawable/ic_account_circle"
+    android:text="$9999.99"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp"
+    android:drawablePadding="8dp"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    style="@style/Base.Widget.AppCompat.Button.Borderless"
+    android:onClick="onAccountButtonClicked"/>
+
