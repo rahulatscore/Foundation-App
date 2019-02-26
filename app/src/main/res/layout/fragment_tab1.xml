@@ -2,24 +2,31 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".ui.main.fragments.tab1.Tab1Fragment">
+             android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+             tools:context=".ui.main.fragments.tab1.Tab1Fragment"
+              >
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/hello_tab1_fragment"
-            android:layout_gravity="center"
-    android:layout_marginBottom="50dp"/>
-    <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:hint="Name"
-            android:ems="10"
-            android:layout_gravity="center"
-            android:id="@+id/editText"/>
+    <!--<TextView-->
+            <!--android:id="@+id/textView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/hello_tab1_fragment"-->
+            <!--android:layout_gravity="center"-->
+    <!--android:layout_marginBottom="50dp"/>-->
+    <!--<EditText-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:inputType="textPersonName"-->
+            <!--android:hint="Name"-->
+            <!--android:ems="10"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:id="@+id/editText"/>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/colorPrimary"/>
 
 </FrameLayout>

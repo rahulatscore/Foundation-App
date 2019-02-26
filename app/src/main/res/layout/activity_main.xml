@@ -4,16 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.MainActivity">
+    tools:context=".ui.main.MainActivity"
+    android:animateLayoutChanges="true">
 
     <FrameLayout
             android:id="@+id/container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginBottom="50dp"/>
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/betSlipCard"
+            app:layout_constraintTop_toTopOf="parent"/>
 
+    <androidx.cardview.widget.CardView
+            android:id="@+id/betSlipCard"
+            android:layout_width="match_parent"
+            android:backgroundTint="@android:color/darker_gray"
+            android:layout_height="48dp"
+            app:cardCornerRadius="4dp"
+            android:layout_margin="4dp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNavigation">
+        <Button android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Bet Slips"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                />
+    </androidx.cardview.widget.CardView>
     <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigation"
             android:background="@color/colorPrimary"

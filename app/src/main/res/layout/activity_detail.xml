@@ -6,5 +6,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.detail.DetailActivity">
-
+    <TextView
+            android:id="@+id/itemDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hi"
+    />
 </android.support.constraint.ConstraintLayout>

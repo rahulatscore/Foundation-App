@@ -1,14 +1,15 @@
 package com.example.betworks.ui.main
 
-import android.os.AsyncTask
-import android.os.Bundle
 //import android.support.v4.app.Fragment
 //import android.support.v7.app.AppCompatActivity
+import android.os.AsyncTask
+import android.os.Bundle
 import android.util.SparseArray
-import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.view.animation.AccelerateDecelerateInterpolator
+import android.view.animation.ScaleAnimation
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -19,8 +20,6 @@ import com.example.betworks.ui.detail.DetailActivity
 import com.example.betworks.ui.main.fragments.TabHostFragment
 import com.example.betworks.ui.openActivity
 import com.example.betworks.ui.replaceFragment
-import com.google.android.material.chip.Chip
-import com.google.android.material.resources.TextAppearance
 import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -65,7 +64,6 @@ class MainActivity : AppCompatActivity(){
         }
         return super.onCreateOptionsMenu(menu)
     }
-
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when(item?.itemId) {
