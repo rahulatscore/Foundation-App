@@ -1,0 +1,25 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/bet_slip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/bottom_nav_height"
+            app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+            app:cardCornerRadius="4dp">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bet_slip_height"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="@string/bet_slip"
+                android:textColor="@android:color/white"/>
+
+    </androidx.cardview.widget.CardView>
+
+</merge>
