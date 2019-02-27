@@ -1,6 +1,5 @@
 package com.example.betworks.di
 
-import com.example.betworks.BettingApplication
 import com.example.betworks.TestBettingApplication
 import com.example.betworks.ui.main.MainActivity
 import com.example.betworks.ui.main.fragments.MainFragmentModuleStub
@@ -24,5 +23,7 @@ interface TestDaggerComponent  : AndroidInjector<TestBettingApplication> {
         fun application(application: TestBettingApplication): Builder
 
         fun build(): TestDaggerComponent
+
+        fun mainFragmentModuleStub(module: MainFragmentModuleStub): Builder
     }
 }

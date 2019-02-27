@@ -11,9 +11,7 @@ open class MainFragmentModuleStub {
 
     @Provides
     open fun sampleData(): SampleData {
-        val sampleData = Mockito.mock(SampleData::class.java)
-        whenever(sampleData.getSimpleData()).thenReturn("Just mock")
-        return sampleData
+        return Mockito.mock(SampleData::class.java)
     }
 
 }

@@ -106,10 +106,10 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    override fun onSaveInstanceState(outState: Bundle?) {
+    override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState?.putSparseParcelableArray(SAVED_STATE_CONTAINER_KEY, savedStateSparseArray)
-        outState?.putInt(SAVED_STATE_CURRENT_TAB_KEY, currentSelectItemId)
+        outState.putSparseParcelableArray(SAVED_STATE_CONTAINER_KEY, savedStateSparseArray)
+        outState.putInt(SAVED_STATE_CURRENT_TAB_KEY, currentSelectItemId)
     }
 
     private companion object {

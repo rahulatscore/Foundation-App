@@ -22,7 +22,8 @@ import javax.inject.Inject
  */
 class TabHostFragment @Inject constructor() : Fragment() {
 
-    @Inject lateinit var sampleData: SampleData
+    @Inject
+    lateinit var sampleData: SampleData
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -58,17 +59,17 @@ class TabHostFragment @Inject constructor() : Fragment() {
             .removeOnBackStackChangedListener(backStackChangeListener)
     }
 
-    override fun onAttach(context: Context?) {
+    override fun onAttach(context: Context) {
         AndroidSupportInjection.inject(this)
         super.onAttach(context)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         //inflater?.inflate(R.menu.main_fragment_option_items, menu)
         super.onCreateOptionsMenu(menu, inflater)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item?.itemId) {
             R.id.itemSettings -> {
                 val title = (item.title?.toString()?:"")
@@ -86,8 +87,8 @@ class TabHostFragment @Inject constructor() : Fragment() {
 
     private fun updateTopBackArrow() {
         with(
-            (activity as AppCompatActivity)
-                .supportActionBar
+            (activity as? AppCompatActivity)
+                ?.supportActionBar
         ) {
             this?.setDisplayHomeAsUpEnabled(childFragmentManager.backStackEntryCount > 1)
         }
