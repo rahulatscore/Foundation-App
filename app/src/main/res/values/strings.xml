@@ -6,4 +6,6 @@
     <string name="hello_tab1_fragment">Hello Tab 1 fragment</string>
     <string name="hello_tab2_fragment">Hello Tab 2 fragment</string>
     <string name="hello_tab3_fragment">Hello Tab 3 fragment</string>
+
+    <string name="bet_slip">Bet Slip</string>
 </resources>

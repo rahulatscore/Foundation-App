@@ -24,7 +24,7 @@ import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class MainActivity : AppCompatActivity(){
+class MainActivity : AppCompatActivity() {
 
     private var savedStateSparseArray = SparseArray<Fragment.SavedState>()
     private var currentSelectItemId = R.id.item2
@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         savedInstanceState?.let {
             savedStateSparseArray = it.getSparseParcelableArray(SAVED_STATE_CONTAINER_KEY) ?: SparseArray()
             currentSelectItemId = it.getInt(SAVED_STATE_CURRENT_TAB_KEY, R.id.item2)
@@ -42,7 +41,7 @@ class MainActivity : AppCompatActivity(){
 
         bottomNavigation
             .setOnNavigationItemSelectedListener {
-                swapFragments(it.itemId, it.title?.toString()?:"${it.itemId}")
+                swapFragments(it.itemId, it.title?.toString() ?: "${it.itemId}")
                 true
             }
         bottomNavigation.selectedItemId = currentSelectItemId
@@ -66,7 +65,7 @@ class MainActivity : AppCompatActivity(){
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when(item?.itemId) {
+        when (item?.itemId) {
             android.R.id.home -> onBackPressed()
             R.id.itemCrashMe -> TODO()
             R.id.itemDetail -> openActivity(DetailActivity::class.java)
@@ -87,7 +86,7 @@ class MainActivity : AppCompatActivity(){
 
 
     override fun onBackPressed() {
-        if(isOnBackPressedHandled()) {
+        if (isOnBackPressedHandled()) {
             super.onBackPressed()
         }
     }
@@ -120,9 +119,10 @@ class MainActivity : AppCompatActivity(){
 
     private fun swapFragments(actionId: Int, key: String) {
         with(supportFragmentManager) {
-            if(findFragmentByTag(key) == null) {
+            if (findFragmentByTag(key) == null) {
                 findFragmentById(R.id.container)?.let {
-                    savedStateSparseArray.put(currentSelectItemId,
+                    savedStateSparseArray.put(
+                        currentSelectItemId,
                         saveFragmentInstanceState(it)
                     )
                 }
