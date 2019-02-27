@@ -10,7 +10,8 @@
     <FrameLayout
             android:id="@+id/container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/bottom_nav_height"/>
 
     <include layout="@layout/layout_bet_slip"/>
 
@@ -18,7 +19,7 @@
             android:id="@+id/bottomNavigation"
             android:background="@color/colorPrimary"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="@dimen/bottom_nav_height"
             android:layout_gravity="bottom"
             app:itemTextColor="@color/bottom_nav_item_state_list"
             app:menu="@menu/bottom_navigation_items"/>
