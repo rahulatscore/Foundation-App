@@ -80,11 +80,11 @@ class Tab1Fragment : Fragment() {
         }
     }
 
-    internal class ArrayAdapter : RecyclerView.Adapter<ViewHolder>() {
+    internal inner class ArrayAdapter : RecyclerView.Adapter<ViewHolder>() {
 
         // Gets the number of animals in the list
         override fun getItemCount(): Int {
-            return 100
+            return sampleData.getItemCount()
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
