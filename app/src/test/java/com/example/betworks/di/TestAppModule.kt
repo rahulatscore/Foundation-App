@@ -6,9 +6,9 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-open class TestAppModule {
+class TestAppModule {
 
     @Provides
-    open fun provideSampleData() = mock<SampleData>()
+    fun provideSampleData() = mock<SampleData>()
 
 }
