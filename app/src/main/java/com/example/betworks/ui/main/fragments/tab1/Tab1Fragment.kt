@@ -13,11 +13,18 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.betworks.R
+import com.example.betworks.analytics.SampleData
 import com.example.betworks.ui.replaceChildFragment
+import dagger.android.support.AndroidSupportInjection
 import kotlinx.android.synthetic.main.fragment_tab1.*
 import java.util.*
+import javax.inject.Inject
 
 class Tab1Fragment : Fragment() {
+
+
+    @Inject
+    lateinit var sampleData: SampleData
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -54,6 +61,10 @@ class Tab1Fragment : Fragment() {
         super.onDestroyView()
     }
 
+    override fun onAttach(context: Context) {
+        AndroidSupportInjection.inject(this)
+        super.onAttach(context)
+    }
 
     companion object {
         private const val KEY = "key_tab1"
@@ -69,11 +80,11 @@ class Tab1Fragment : Fragment() {
         }
     }
 
-    internal class ArrayAdapter : RecyclerView.Adapter<ViewHolder>() {
+    internal inner class ArrayAdapter : RecyclerView.Adapter<ViewHolder>() {
 
         // Gets the number of animals in the list
         override fun getItemCount(): Int {
-            return 100
+            return sampleData.getItemCount()
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

@@ -65,6 +65,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:16.0.7'
     // Add dependency
     implementation 'com.crashlytics.sdk.android:crashlytics:2.9.9'
+    debugImplementation 'androidx.fragment:fragment-testing:1.1.0-alpha04'
     testImplementation testlibraries.junit
     testImplementation testlibraries.robolectric
     testImplementation testlibraries.daggerMockJava

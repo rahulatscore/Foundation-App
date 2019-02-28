@@ -18,7 +18,7 @@ import org.robolectric.RobolectricTestRunner
 //@Config(application = TestBettingApplication::class)
 class TabHostFragmentTest {
 
-    @get:Rule val rule = DaggerMock.rule<TestDaggerComponent>(MainFragmentModuleStub())
+    @get:Rule val rule = DaggerMock.rule<TestDaggerComponent>(TestAppModule())
 
     //@InjectFromComponent(MainActivity::class) lateinit var mainFragment: TabHostFragment
     //@InjectFromComponent(MainActivity::class) lateinit var mainFragment: TabHostFragment
