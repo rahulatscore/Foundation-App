@@ -1,10 +1,10 @@
 package com.example.betworks.analytics
 
-open class SampleData(){
+class SampleData(){
 
-    open fun getSimpleData(): String {
+    fun getSimpleData(): String {
         return "Just data"
     }
 
-    open fun getItemCount(): Int = 100
+    fun getItemCount(): Int = 100
 }
