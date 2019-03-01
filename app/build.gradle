@@ -71,7 +71,6 @@ dependencies {
     testImplementation testlibraries.daggerMockJava
     testImplementation testlibraries.daggerMockKotlin
     testImplementation 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.1.0'
-    testImplementation 'org.robolectric:shadows-supportv4:3.6.1'
     testImplementation "android.arch.persistence.room:testing:$room_version"
     testImplementation 'androidx.test:core:1.1.0'
     androidTestImplementation testlibraries.runner
